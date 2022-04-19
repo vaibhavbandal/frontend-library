@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { getAdminData } from "../../services/api";
+import LibrarianDetails from "./LibrarianDetails";
+import LibrarianRegister from "./LibrarianRegister";
 
 export const Librarian = () => {
 
@@ -39,32 +41,10 @@ export const Librarian = () => {
 
 
         <Routes>
-            <Route path="/librarian-list" element={<h3>Librarian List</h3>} />
-            <Route path="/register-librarian" element={<h3>Register Librarian</h3>} />
+            <Route path="/librarian-list" element={<LibrarianDetails/>} />
+            <Route path="/register-librarian" element={<LibrarianRegister/>} />
         </Routes>
         
-
-        {/* className="horizontal-menu-link me-2 p-1" */}
-
-        {/* <div>
-                <div>
-                    First Name: {admin.firstName}
-                </div>
-                <div>
-                    Last Name: {admin.lastName}
-                </div>
-                <div>
-                    Email: {admin.email}
-                </div>
-                <div>
-                    Mobile: {admin.mobile} 
-                </div>
-                <div>
-                    User Type: {admin.type} 
-                </div>
-            </div> */}
-
-
 
 
     </>)

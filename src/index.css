@@ -69,3 +69,12 @@ code {
 .horizontal-menu-link:hover{
   background-color: green;
 }
+
+
+.footer{
+  height: 601px;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+}

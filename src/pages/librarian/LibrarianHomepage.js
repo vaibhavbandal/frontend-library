@@ -10,6 +10,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import { getAdminData ,getLibrarianData } from '../../services/api';
 import Animations from '../../components/Animations';
 import { Account } from './Account';
+import { Book } from './Book';
 
 
 const LibrarianHomepage = () => {
@@ -135,7 +136,17 @@ const LibrarianHomepage = () => {
                             }} 
                             id={navLink.student? 'sidebar-link-active':''}
                             className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "} to={'/librarian-homepage/student/student-list'} >
-                                student
+                                Student
+
+                            </NavLink>
+                        </li>
+                        <li className=''>
+                            <NavLink onClick={()=>{
+                                return handleLink('book')
+                            }} 
+                            id={navLink.book? 'sidebar-link-active':''}
+                            className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "} to={'/librarian-homepage/book/book-list'} >
+                                Book
 
                             </NavLink>
                         </li>
@@ -169,6 +180,7 @@ const LibrarianHomepage = () => {
                     <Routes>
                         <Route path="/home/*" element={<Home />} />
                         <Route path="/student/*" element={<Student />} />
+                        <Route path="/book/*" element={<Book/>} />
                         <Route path="/account/*" element={<Account/>} />
                     </Routes>
 

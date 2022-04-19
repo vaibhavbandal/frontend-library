@@ -53,3 +53,148 @@ export const getStudentData = async () => {
     }
 };
 
+export const getAllLibrarianData = async () => {
+    try {
+      let token=localStorage.getItem('library-login');
+      return await axios.get(`${url}/common/get-all-librarian`,{ headers: {"Authorization" : `Bearer ${token}`} });
+    } catch (error) {
+      console.log("Error while calling postProblems API", error);
+    }
+};
+
+export const registerLibrarian = async (postData) => {  
+    try {
+      let token=localStorage.getItem('library-login');
+      return await axios.post(`${url}/admin/register-librarian`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+    } catch (error) {
+      console.log("Error while calling postProblems API", error);
+    }
+};
+
+export const getAllStudentData = async () => {
+    try {
+      let token=localStorage.getItem('library-login');
+      return await axios.get(`${url}/common/get-all-student`,{ headers: {"Authorization" : `Bearer ${token}`} });
+    } catch (error) {
+      console.log("Error while calling postProblems API", error);
+    }
+};
+
+export const registerStudent = async (postData) => {  
+    try {
+      let token=localStorage.getItem('library-login');
+      return await axios.post(`${url}/librarian/student-register`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+    } catch (error) {
+      console.log("Error while calling postProblems API", error);
+    }
+};
+
+// Import Book
+export const importBook = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.post(`${url}/admin/import-book`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+
+
+// Checking BookCode
+export const checkBookCode = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.post(`${url}/admin/check-book-code`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+
+
+// get-all-book
+export const getAllBook = async () => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.get(`${url}/common/get-all-book`,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+
+// get-all-bookstore
+export const getAllBookStore = async () => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.get(`${url}/common/get-book-store-data`,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+}
+
+// get-book-import-history
+export const getBookImportHistory = async () => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.get(`${url}/common/get-book-import-history`,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+
+export const getBookDataByBookCode = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.get(`${url}/common/get-book-data/${postData}`,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+
+
+export const changePasswordAdmin = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.post(`${url}/admin/change-password`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+
+export const changePasswordLibrarian = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.post(`${url}/librarian/change-password`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+}
+
+export const changePasswordStudent = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.post(`${url}/student/change-password`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+}
+
+
+
+export const issueReturnBook = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.post(`${url}/librarian/issue-return-book`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+
+export const getIssueReturnHistory = async (postData) => {  
+  try {
+    let token=localStorage.getItem('library-login');
+    return await axios.get(`${url}/common/get-issue-return-history`,postData,{ headers: {"Authorization" : `Bearer ${token}`} });
+  } catch (error) {
+    console.log("Error while calling postProblems API", error);
+  }
+};
+

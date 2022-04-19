@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { getAdminData } from "../../services/api";
 import BookDetails from "./BookDetails";
-import ImportBook from "./ImportBook";
-import ImportHistory from "./ImportHistory";
+// import ImportBook from "./ImportBook";
+// import ImportHistory from "./ImportHistory";
 
 export const Book = () => {
 
@@ -33,21 +33,21 @@ export const Book = () => {
 
         <div className="border-bottom d-flex " >
             <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
-                to={'/admin-homepage/book/book-list'}>
+                to={'/librarian-homepage/book/book-list'}>
                 Book List</NavLink>
-            <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
+            {/* <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
                 to={'/admin-homepage/book/import-book'}>
-                Import Book</NavLink>
-            <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
+                Import Book</NavLink> */}
+            {/* <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
                 to={'/admin-homepage/book/import-history'}>
-                Import History</NavLink>
+                Import History</NavLink> */} 
         </div>
 
 
         <Routes>
             <Route path="/book-list" element={<BookDetails/>} />
-            <Route path="/import-book" element={<ImportBook/>} />
-            <Route path="/import-history" element={<ImportHistory/>} />
+            {/* <Route path="/import-book" element={<ImportBook/>} /> */}
+            {/* <Route path="/import-history" element={<ImportHistory/>} /> */}
         </Routes>
         
 

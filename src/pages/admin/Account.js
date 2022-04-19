@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { getAdminData } from "../../services/api";
+import { ChangePassword } from "./ChangePassword";
+import { MyAccount } from "./MyAccount";
 
 export const Account = () => {
 
@@ -39,7 +41,6 @@ export const Account = () => {
 
     return (<>
 
-
         <div className="border-bottom d-flex " >
             <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
                 to={'/admin-homepage/account/my-account'}>
@@ -49,35 +50,11 @@ export const Account = () => {
                 Change Password</NavLink>
         </div>
 
-
         <Routes>
-            <Route path="/my-account" element={<h3>MyAccount</h3>} />
-            <Route path="/change-password" element={<h3>Change Password</h3>} />
+            <Route path="/my-account" element={<MyAccount/>} />
+            <Route path="/change-password" element={<ChangePassword/>} />
         </Routes>
         
-
-        {/* className="horizontal-menu-link me-2 p-1" */}
-
-        {/* <div>
-                <div>
-                    First Name: {admin.firstName}
-                </div>
-                <div>
-                    Last Name: {admin.lastName}
-                </div>
-                <div>
-                    Email: {admin.email}
-                </div>
-                <div>
-                    Mobile: {admin.mobile} 
-                </div>
-                <div>
-                    User Type: {admin.type} 
-                </div>
-            </div> */}
-
-
-
 
     </>)
 }

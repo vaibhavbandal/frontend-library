@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { getAdminData } from "../../services/api";
+import StudentDetails from './StudentDetails';
+import { StudentRegister } from "./StudentRegister";
 
 export const Student = () => {
 
@@ -39,31 +41,10 @@ export const Student = () => {
 
 
         <Routes>
-            <Route path="/student-list" element={<h3>Student List</h3>} />
-            <Route path="/register-student" element={<h3>Register Student</h3>} />
+            <Route path="/student-list" element={<StudentDetails/>} /> 
+            <Route path="/register-student" element={ <StudentRegister/> } />
         </Routes>
         
-
-        {/* className="horizontal-menu-link me-2 p-1" */}
-
-        {/* <div>
-                <div>
-                    First Name: {admin.firstName}
-                </div>
-                <div>
-                    Last Name: {admin.lastName}
-                </div>
-                <div>
-                    Email: {admin.email}
-                </div>
-                <div>
-                    Mobile: {admin.mobile} 
-                </div>
-                <div>
-                    User Type: {admin.type} 
-                </div>
-            </div> */}
-
 
 
 

@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { getAdminData } from "../../services/api";
-import { ChangePassword } from "./ChangePassword";
-import { MyAccount } from "./MyAccount";
 
-export const Account = () => {
+export const MyAccount = () => {
 
     const [loading, setLoading] = useState(false);
     const [admin, setAdmin] = useState({});
@@ -41,22 +39,14 @@ export const Account = () => {
 
     return (<>
 
-
-        <div className="border-bottom d-flex " >
-            <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
-                to={'/librarian-homepage/account/my-account'}>
-                My Account</NavLink>
-            <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
-                to={'/librarian-homepage/account/change-password'}>
-                Change Password</NavLink>
-        </div>
-
-
-        <Routes>
-            <Route path="/my-account" element={<MyAccount/>} />
-            <Route path="/change-password" element={<ChangePassword/>} />
-        </Routes>
-       
+       <h3>My Account</h3>
+            <div>
+                <p>FirstName:{admin.firstName}</p>
+                <p>LastName:{admin.lastName}</p>
+                <p>Email:{admin.email}</p>
+                <p>Mobile:{admin.mobile}</p>
+                <p>Type:{admin.type}</p>
+            </div>
 
     </>)
 }

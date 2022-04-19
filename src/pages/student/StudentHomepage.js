@@ -51,7 +51,6 @@ const StudentHomepage = () => {
                 navigate('/student');
             } else {
                 const response=await getStudentData();
-                console.log(response.data);
                 if(response.data){
                     setLoading(false);
                     setStudent(response.data);

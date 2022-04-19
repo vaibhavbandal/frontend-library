@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { getAdminData } from "../../services/api";
+import Home1 from "./Home1";
+import { IssueReturnBook } from "./IssueReturnBook";
+import { IssueReturnHistory } from "./IssueReturnHistory";
+
 
 export const Home = () => {
 
@@ -34,38 +38,19 @@ export const Home = () => {
                 Home1</NavLink>
             <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
                 to={'/librarian-homepage/home/home2'}>
-                Home2</NavLink>
+                Issue and Return</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
+                to={'/librarian-homepage/home/issue-return-history'}>
+                History IR</NavLink>
         </div>
 
 
         <Routes>
-            <Route path="/home1" element={<h3>Home1</h3>} />
-            <Route path="/home2" element={<h3>Home2</h3>} />
+            <Route path="/home1" element={<Home1/>} />
+            <Route path="/home2" element={<IssueReturnBook/>} />
+            <Route path="/issue-return-history" element={ <IssueReturnHistory/> } />
         </Routes>
         
-
-        {/* className="horizontal-menu-link me-2 p-1" */}
-
-        {/* <div>
-                <div>
-                    First Name: {admin.firstName}
-                </div>
-                <div>
-                    Last Name: {admin.lastName}
-                </div>
-                <div>
-                    Email: {admin.email}
-                </div>
-                <div>
-                    Mobile: {admin.mobile} 
-                </div>
-                <div>
-                    User Type: {admin.type} 
-                </div>
-            </div> */}
-
-
-
 
     </>)
 }

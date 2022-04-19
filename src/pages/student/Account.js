@@ -1,29 +1,23 @@
 import { useEffect, useState } from "react"
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
-import { getAdminData } from "../../services/api";
+import {getStudentData } from "../../services/api";
+import { ChangePassword } from "./ChangePassword";
+import { MyAccount } from "./MyAccount";
 
 export const Account = () => {
 
     const [loading, setLoading] = useState(false);
-    const [admin, setAdmin] = useState({});
+ 
 
     const navigate = useNavigate();
     useEffect(() => {
 
         const fetchData = async () => {
-            setLoading(true);
             const token = localStorage.getItem('library-login');
             if (token === null) {
                 navigate('/admin');
             } else {
-                const response = await getAdminData();
-                if (response.status === 200) {
-                    setLoading(false);
-                    setAdmin(response.data);
-
-                } else {
-                    navigate('/login');
-                }
+               
             }
         }
 
@@ -51,33 +45,10 @@ export const Account = () => {
 
 
         <Routes>
-            <Route path="/my-account" element={<h3>MyAccount</h3>} />
-            <Route path="/change-password" element={<h3>Change Password</h3>} />
+            <Route path="/my-account" element={<MyAccount/>} />
+            <Route path="/change-password" element={<ChangePassword/>} />
         </Routes>
         
-
-        {/* className="horizontal-menu-link me-2 p-1" */}
-
-        {/* <div>
-                <div>
-                    First Name: {admin.firstName}
-                </div>
-                <div>
-                    Last Name: {admin.lastName}
-                </div>
-                <div>
-                    Email: {admin.email}
-                </div>
-                <div>
-                    Mobile: {admin.mobile} 
-                </div>
-                <div>
-                    User Type: {admin.type} 
-                </div>
-            </div> */}
-
-
-
 
     </>)
 }
