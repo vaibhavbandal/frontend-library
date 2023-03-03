@@ -39,8 +39,10 @@ export const MyAccount = () => {
 
     return (<>
 
-       <h3>My Account</h3>
-            <div>
+        <div className="d-flex justify-content-center shadow">
+            <h3>My Account</h3>
+        </div>
+            <div className="d-flex justify-content-center shadow flex-column mx-4">
                 <p>FirstName:{admin.firstName}</p>
                 <p>LastName:{admin.lastName}</p>
                 <p>Email:{admin.email}</p>

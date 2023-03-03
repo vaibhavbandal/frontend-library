@@ -35,7 +35,7 @@ export const Home = () => {
     return (<>
 
 
-        <div className="border-bottom d-flex " >
+        <div className="border-bottom d-flex" >
             <NavLink className={({ isActive }) => isActive ? "text-decoration-none text-dark ms-1 sidebar-link sidebar-link-active " : "text-decoration-none text-dark ms-1 sidebar-link "}
                 to={'/admin-homepage/home/home1'}>
                 Home</NavLink>

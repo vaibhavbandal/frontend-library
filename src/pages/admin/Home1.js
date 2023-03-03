@@ -73,37 +73,43 @@ const Home1=()=>{
         <div className="container  text-center">
             <p>SUMMARRY</p>
         </div>
+        <div className="d-flex justify-content-around" > 
 
-        <div className="border d-inline-block p-3 ms-2 text-center">
+        <div className=" p-3 ms-2 text-center shadow-lg " style={{width:'150px',height:'120px'}}>
                 <p>Total Type Books</p>
                 <p>{summary.totalBooks}</p>
         </div>
 
-        <div className="border d-inline-block p-3 ms-2 text-center">
+        <div className=" p-3 ms-2 text-center shadow-lg " style={{width:'150px',height:'120px'}}>
                 <p>Total Books Quantity</p>
                 <p>{summary.totalBooksQuantity}</p>
         </div>
 
-        <div className="border d-inline-block p-3 ms-2 text-center">
+        <div className="border d-inline-block p-3 ms-2 text-center shadow-lg" 
+        style={{width:'auto',height:'120px'}}>
                 <p>Total Issue</p>
                 <p>{summary.totalIssue}</p>
         </div>
 
-        <div className="border d-inline-block p-3 ms-2 text-center">
+        <div className="border d-inline-block p-3 ms-2 text-center shadow-lg" 
+        style={{width:'auto',height:'120px'}}>
                 <p>Total Available</p>
                 <p>{summary.totalAvailable}</p>
         </div>
 
-        <div className="border d-inline-block p-3 ms-2 text-center">
+        <div className="border d-inline-block p-3 ms-2 text-center shadow-lg" 
+        style={{width:'auto',height:'120px'}}>
                 <p>Total Student</p>
                 <p>{summary.totalStudent}</p>
         </div>
 
-        <div className="border d-inline-block p-3 ms-2 text-center">
+        <div className="border d-inline-block p-3 ms-2 text-center shadow-lg" 
+        style={{width:'auto',height:'120px'}}>
                 <p>Total Librarian</p>
                 <p>{summary.totalLibrarian}</p>
         </div>
     
+        </div>
     </>)
 
 }

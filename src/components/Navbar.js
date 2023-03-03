@@ -16,7 +16,7 @@ const Navbar=()=>{
   let activeClassName = "underline";
     return(<> 
     
-    <nav className="navbar navbar-expand-lg navbar-light bg-light border fixed-top  "> 
+    <nav className="navbar navbar-expand-lg shadow-sm navbar-light bg-light border fixed-top  "> 
   <div className="container-fluid">
   <Link className="text-dark text-decoration-none  " to={'/'} > LIBRARY </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

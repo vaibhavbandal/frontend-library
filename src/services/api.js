@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const url = "http://localhost:8000/api/v1";
+const url = "https://backend-library-production.up.railway.app/api/v1";
+// const url = "http://localhost:8000/api/v1";
 
 export const adminLogin = async (postData) => {
     try {

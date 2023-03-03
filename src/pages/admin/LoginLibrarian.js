@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";
-import { adminLogin, librarianLogin, studentLogin } from "../services/api";
+import { adminLogin, librarianLogin, studentLogin } from "../../services/api"
 
-export function Login({ loginUser , email,password }) {
+export function LoginLibrarian({ loginUser , email,password }) {
 
     const [formData, setFormData] = useState({
         email,password
